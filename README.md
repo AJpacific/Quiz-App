@@ -127,3 +127,7 @@ npm run build
 - Powered by React and Vite
 - Styled with Tailwind CSS
 
+<<<<<<< HEAD
+=======
+Built with ❤️
+>>>>>>> 43ebd9f (Update)
