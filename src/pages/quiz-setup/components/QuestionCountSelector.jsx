@@ -21,11 +21,6 @@ const QuestionCountSelector = ({ selectedCount, onCountChange }) => {
     }
   ];
 
-  const getEstimatedTime = (count) => {
-    const timePerQuestion = 1.2; // minutes
-    const totalMinutes = Math.ceil(count * timePerQuestion);
-    return `~${totalMinutes} minutes`;
-  };
 
   return (
     <div className="space-y-4">
@@ -44,19 +39,6 @@ const QuestionCountSelector = ({ selectedCount, onCountChange }) => {
         className="w-full"
       />
       
-      {selectedCount && (
-        <div className="mt-3 p-3 bg-muted/50 rounded-lg border border-border">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center space-x-2">
-              <Icon name="Clock" size={16} className="text-muted-foreground" />
-              <span className="text-muted-foreground">Estimated time:</span>
-            </div>
-            <span className="font-medium text-foreground">
-              {getEstimatedTime(selectedCount)}
-            </span>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
