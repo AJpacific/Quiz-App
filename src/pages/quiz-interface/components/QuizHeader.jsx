@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../../../components/AppIcon';
 
 const QuizHeader = ({ 
-  quizTitle = "React Fundamentals Quiz",
+  quizTitle = "Quiz",
   difficulty = "Medium",
   totalQuestions = 10,
   className = ""

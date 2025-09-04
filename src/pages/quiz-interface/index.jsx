@@ -6,6 +6,7 @@ import QuizTimer from './components/QuizTimer';
 import QuizProgress from './components/QuizProgress';
 import QuizNavigation from './components/QuizNavigation';
 import QuizHeader from './components/QuizHeader';
+import { CATEGORIES } from '../../services/triviaApi';
 
 const QuizInterface = () => {
   const navigate = useNavigate();
@@ -318,7 +319,7 @@ const QuizInterface = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 max-w-7xl">
         {/* Quiz Header */}
         <QuizHeader
-          quizTitle={quizSettings?.category ? `${quizSettings.category} Quiz` : "Trivia Quiz"}
+          quizTitle={quizSettings?.category ? `${CATEGORIES[quizSettings.category] || 'Trivia'} Quiz` : "Trivia Quiz"}
           difficulty={quizSettings?.difficulty}
           totalQuestions={totalQuestions}
           className="mb-4 sm:mb-6"
